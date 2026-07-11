@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToDo App</title>
+
+</head>
+
+<body>
+    
+    <h1>ToDo App</h1>
+
+    <div class="wrapper">
+
+        <form>
+
+            <input id="todo-input" type="text" placeholder="write anything and click add" autocomplete="off">
+
+            <button id="add-button">ADD</button>
+
+            <ul id="todo-list">
+
+                <li class="todo">
+
+                    <input type="checkbox" id="todo-1">
+
+                    <label for="todo-1" class="custom-checkbox">
+
+                        <i data-lucide="check"></i>
+                        
+                    </label>
+
+                </li>
+
+            </ul>
+
+        </form>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>lucide.createIcons();</script>
+
+</body>
+
+</html>
