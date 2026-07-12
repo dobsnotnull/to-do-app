@@ -7,7 +7,7 @@
     --background-color: #f5f5f5;
     --primary-color: #1e1e1e;
     --secondary-color: #cccccc;
-    --accent-color: lightgrey;
+    --accent-color: #df3000;
     --text-color: #323232;
 
 
@@ -116,5 +116,10 @@ form {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.delete-button:hover {
+    color: var(--accent-color);
 }
 
