@@ -64,13 +64,13 @@ h1 {
     border-radius: 1000px;
     font: inherit;
     color: var(--text-color);
-    caret-color: var(--accent-color);
+    caret-color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
 #todo-input:focus {
     outline: none;
-    border-color: var(--accent-color);
+    border-color: var(--secondary-color);
 }
 
 form {
@@ -117,9 +117,28 @@ form {
     align-items: center;
     cursor: pointer;
     color: var(--secondary-color);
+    transition: 500ms ease;
 }
 
 .delete-button:hover {
     color: var(--accent-color);
 }
 
+.custom-checkbox {
+    border: 2px solid var(--secondary-color);
+    border-radius: 20%;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+input[type = "checkbox"]:checked ~ .custom-checkbox {
+    background-color: var(--primary-color);
+}
+
+input[type = "checkbox"]:checked ~ .custom-checkbox svg {
+    color: var(--secondary-color);
+}
