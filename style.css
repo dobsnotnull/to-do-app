@@ -65,6 +65,7 @@ h1 {
     font: inherit;
     color: var(--text-color);
     caret-color: var(--accent-color);
+    margin-bottom: 10px;
 }
 
 #todo-input:focus {
@@ -106,3 +107,14 @@ form {
     padding-right: 0;
     flex-grow: 1;
 }
+
+.delete-button {
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
