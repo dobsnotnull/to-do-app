@@ -8,7 +8,7 @@ const todoListUl = document.getElementById("todo-list");
 
 // Create an empty array
 
-let allToDos = [];
+let allTodos = [];
 
 
 
@@ -26,9 +26,29 @@ todoForm.addEventListener("submit", (e) => {
     addTodo();
 });
 
+
+// Fucntion that adds the thing that you're typing
+
 function addTodo() {
-    const todoText = todoInput.value;
-    alert(todoText);
+    const todoText = todoInput.value.trim();
+    allTodos.push(todoText);
+
+    if(todoText.length > 0) {
+        console.log(allTodos);
+        createTodoItem(todoText);
+        todoInput.value="";
+    }
 }
+
+function createTodoItem(todo) {
+    const todoLi = document.createElement ("li");
+    todoLi.innerText = todo;
+    todoListUl.append(todoLi);
+}
+
+
+function updateTodoList( {
+    
+})
 
 
