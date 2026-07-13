@@ -70,4 +70,7 @@ function createTodoItem(todo, todoIndex) {
 
         return todoLi;
 }
-
+\
+function saveTodos() {
+    
+}
