@@ -35,20 +35,39 @@ function addTodo() {
 
     if(todoText.length > 0) {
         console.log(allTodos);
-        createTodoItem(todoText);
+        updateTodoList();
         todoInput.value="";
     }
 }
 
-function createTodoItem(todo) {
-    const todoLi = document.createElement ("li");
-    todoLi.innerText = todo;
-    todoListUl.append(todoLi);
+
+function updateTodoList(){
+    todoListUl.innerHTML = "",
+    allTodos.forEach((todo, todoIndex) => {
+    todoItem = createTodoItem(todo, todoIndex);
+    todoListUl.append(todoItem);
+    })
 }
 
 
-function updateTodoList( {
-    
-})
+function createTodoItem(todo, todoIndex) {
+    const todoId = "todo-" +todoIndex;
+    const todoLi = document.createElement ("li");
+    todoLi.className = "todo";
+    todoLi.innerHTML = `
+          <input type = "checkbox" id = "${todoId}">
 
+                    <label for="${todoId}" class="custom-checkbox">
+
+                        <i data-lucide="check"></i>
+
+                    </label>
+
+                    <label for="${todoId}" class="todo-text">${todo}</label>
+
+                    <button class="delete-button"><i data-lucide="trash-2"></i></button>
+        `
+
+        return todoLi;
+}
 
