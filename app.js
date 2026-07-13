@@ -23,7 +23,12 @@ let allToDos = [];
 
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("wagwan gang");
+    addTodo();
 });
+
+function addTodo() {
+    const todoText = todoInput.value;
+    alert(todoText);
+}
 
 
